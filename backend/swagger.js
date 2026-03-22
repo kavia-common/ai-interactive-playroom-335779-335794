@@ -4,12 +4,13 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'My Express API',
+      title: 'AI Interactive Playroom - Game Support API',
       version: '1.0.0',
-      description: 'A simple Express API documented with Swagger',
-    }
+      description:
+        'Backend support API for the interactive game frontend: health checks, AI-style interaction responses, and game event streaming.',
+    },
   },
-  apis: ['./src/routes/*.js'], // Path to the API docs
+  apis: ['./src/routes/*.js'], // Includes index.js and api.js
 };
 
 const swaggerSpec = swaggerJSDoc(options);

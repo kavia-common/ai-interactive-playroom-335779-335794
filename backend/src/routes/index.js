@@ -1,8 +1,13 @@
 const express = require('express');
 const healthController = require('../controllers/health');
+const apiRouter = require('./api');
 
 const router = express.Router();
-// Health endpoint
+
+// Mount versionless API namespace (backend support for the game frontend)
+router.use('/api', apiRouter);
+
+// Health endpoint (kept at `/` for backwards compatibility)
 
 /**
  * @swagger
